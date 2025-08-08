@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small custom */
+.card-flip {
+  perspective: 1000px;
+}
+.card-inner {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.card-front, .card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
